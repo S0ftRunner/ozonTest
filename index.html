@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tuner</title>
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body class="page">
+    <article class="progress__container">
+      <div class="progress_block">
+        <svg viewBox="0 0 64 64" class="progress_bar">
+          <circle class="chart" r="25%" cx="50%" cy="50%"></circle>
+          <circle
+            class="background"
+            r="25%"
+            cx="50%"
+            cy="50%"
+            stroke-dasharray="80 100"
+          ></circle>
+        </svg>
+      </div>
+      <div class="control__block">
+        <ul class="control__list">
+          <li class="control__list-item">
+            <label for="input__progress_bar"
+              ><input
+                id="input__progress_bar"
+                class="input__progress"
+                type="number"
+                min="0"
+                max="100"
+              />
+              Value</label
+            >
+          </li>
+          <li class="control__list-item">
+            <label class="switch">
+              <input class="animate_check" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+            <span>Animate</span>
+          </li>
+          <li class="control__list-item">
+            <label class="switch">
+              <input class="hide_check" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+            <span>Hide</span>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
