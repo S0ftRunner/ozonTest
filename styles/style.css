@@ -2,14 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  inline-size: 420px;
+  inline-size: 100vw;
   font-family: "IBM Plex mono", sans-serif;
   font-weight: 600;
 }
 
 .progress__container {
-  margin-block-start: 30%;
+  margin-block-start: 10%;
   border: 3px solid #3e3ef7;
   border-radius: 10px;
   inline-size: 320px;
