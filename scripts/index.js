@@ -1,3 +1,5 @@
+
+// SELECTORS
 const animateCheck = document.querySelector(".animate_check");
 const hideCheck = document.querySelector(".hide_check");
 const progressBarCirlce = document.querySelector(".progress_bar-circle");
@@ -9,6 +11,7 @@ const radius = progressBarCirlce.r.baseVal.value;
 // получаем длину окружности
 const circumference = 2 * Math.PI * radius;
 
+// INIT STATE
 progressBarCirlce.style.strokeDasharray = `${circumference} ${circumference}`;
 progressBarCirlce.style.strokeDashoffset = circumference;
 let progressAnimate = 0;
@@ -44,6 +47,8 @@ inputValueProgressBar.addEventListener("input", ({ target: t }) => {
 function setProgress(percent, callback) {
   const offset = circumference - (percent / 100) * circumference;
   progressBarCirlce.style.strokeDashoffset = offset;
+
+  // если передан колбэк с setInterval, то остановим его на позиции 100 
   if (percent >= 99 && callback) {
     clearInterval(callback);
   }

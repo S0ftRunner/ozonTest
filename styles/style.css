@@ -26,11 +26,7 @@
   transition: opacity 0.5s;
 
 }
-.progress_bar .background {
-  fill: transparent;
-  stroke: #3e3ef7;
-  stroke-width: 4;
-}
+
 .progress_bar .progress_bar-circle {
   transform-origin: center;
   transform: rotate(-90deg);
