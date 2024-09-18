@@ -9,7 +9,7 @@
 }
 
 .progress__container {
-  margin-block-start: 100%;
+  margin-block-start: 30%;
   border: 3px solid #3e3ef7;
   border-radius: 10px;
   inline-size: 320px;
