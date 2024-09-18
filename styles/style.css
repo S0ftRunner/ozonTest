@@ -2,16 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-inline-size: 1920px;
-  min-inline-size: 420px;
+
   inline-size: 420px;
   font-family: "IBM Plex mono", sans-serif;
   font-weight: 600;
 }
 
 .progress__container {
-  margin-block-start: 50px;
-  border: 1px solid black;
+  margin-block-start: 100%;
+  border: 3px solid #3e3ef7;
+  border-radius: 10px;
   inline-size: 320px;
   block-size: 568px;
   display: flex;
@@ -22,21 +22,22 @@
 
 .progress_bar {
   width: 100%;
-  height: 100%;
   border-radius: 50%;
   transition: opacity 0.5s;
-  transform: rotate(270deg);
 
 }
 .progress_bar .background {
-  fill: none;
+  fill: transparent;
   stroke: #3e3ef7;
   stroke-width: 4;
 }
-.progress_bar .chart {
-  fill: none;
-  /* stroke: #3e3ef7;
-  stroke-width: 4; */
+.progress_bar .progress_bar-circle {
+  transform-origin: center;
+  transform: rotate(-90deg);
+  fill: transparent;
+  stroke: #3e3ef7;
+  stroke-width: 4;
+  transition: stroke-dashoffset 0.3s;
 }
 
 .control__block {
@@ -122,4 +123,20 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+
+@media screen and (orientation: portrait) {
+  .progress__container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    inline-size: 568px;
+    block-size: 320px;
+  }
+
+  .control__block {
+    block-size: 100%;
+    margin-block-start: 70px;
+  }
 }
