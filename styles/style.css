@@ -122,7 +122,7 @@ input:checked + .slider:before {
 }
 
 
-@media screen and (orientation: portrait) {
+/* @media screen and (orientation: portrait) {
   .progress__container {
     justify-content: center;
     align-items: center;
@@ -135,4 +135,4 @@ input:checked + .slider:before {
     block-size: 100%;
     margin-block-start: 70px;
   }
-}
+} */
